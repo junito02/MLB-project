@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MLB</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cards.css" />
+    <link rel="stylesheet" href="./css/jugadores.css" />
+    <link rel="icon" href="./img/logo.png" />
+  </head>
+  <body>
+    <!-- Floating Baseballs -->
+    <div class="floating-baseball">⚾</div>
+    <div class="floating-baseball">⚾</div>
+    <div class="floating-baseball">⚾</div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo"> ⚾ MLB </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#equipos">Equipos</a></li>
+          <li><a href="#jugadores">Jugadores</a></li>
+        </ul>
+        <div class="mobile-menu" id="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Major League Baseball</h1>
+        <p class="subtitle">La Liga Más Emocionante del Mundo</p>
+        <p class="description">
+          Descubre la pasión, historia y emoción del béisbol profesional. Conoce
+          a tus equipos favoritos y sigue a las estrellas que hacen historia en
+          cada temporada.
+        </p>
+        <div class="cta-buttons">
+          <a href="#equipos" class="cta-button">Explorar Equipos</a>
+          <a href="#jugadores" class="cta-button secondary">Ver Jugadores</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="section">
+      <div class="stats-section">
+        <h2>MLB Trailer</h2>
+        <div class="video-container fullwidth">
+          <video autoplay controls playsinline>
+            <source src="./video/MLB.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teams Section -->
+    <section id="equipos" class="section">
+      <h2>Equipos de las Grandes Ligas</h2>
+      <div class="loading" id="teams-loading">
+        <div class="spinner"></div>
+        <div class="loading-text">Cargando equipos...</div>
+      </div>
+      <div class="teams-grid" id="teams-container"></div>
+    </section>
+
+    <!-- Sección Jugadores en Tendencia -->
+    <section id="jugadores" class="section">
+      <h2>Jugadores en Tendencia</h2>
+
+      <!-- Indicador de carga -->
+      <div class="loading" id="players-loading">
+        <div class="spinner"></div>
+        <div class="loading-text">Cargando jugadores...</div>
+      </div>
+
+      <!-- Grid de jugadores -->
+      <div class="players-grid" id="players-container">
+        <!-- Aquí se insertarán las cards dinámicamente -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>
+          Explora el mundo del béisbol profesional con la información más
+          actualizada
+        </p>
+        <div class="footer-links">
+          <a href="#home">Inicio</a>
+          <a href="#equipos">Equipos</a>
+          <a href="#jugadores">Jugadores</a>
+          <a href="https://mlb.com" target="_blank">MLB Oficial</a>
+        </div>
+        <p>
+          &copy; 2025 MLB Landing Page. Datos proporcionados por MLB Stats API.
+        </p>
+      </div>
+    </footer>
+    <script src="./js/equipos.js"></script>
+    <script src="./js/jugadores.js"></script>
+    <script src="./js/navbar.js"></script>
+  </body>
+</html>
