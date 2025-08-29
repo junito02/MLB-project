@@ -1,22 +1,22 @@
-/* Team Cards con efecto WOW 🚀 */
+/* Team Cards con efecto ÉPICO */
 .team-card {
   background: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.08),
-    rgba(255, 255, 255, 0.02)
-  ); /* Fondo elegante con vidrio */
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 22px;
-  padding: 1.5rem 1rem;
+    rgba(255, 215, 0, 0.08),
+    rgba(255, 69, 87, 0.02)
+  ); /* Fondo elegante con vidrio y gradiente dorado/rojo */
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 25px;
+  padding: 1.8rem 1.2rem;
   text-align: center;
-  transition: all 0.4s ease;
-  backdrop-filter: blur(15px) saturate(160%);
+  transition: all 0.5s ease;
+  backdrop-filter: blur(18px) saturate(180%);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 35px rgba(255, 215, 0, 0.25);
 }
 
-/* Brillo decorativo al pasar */
+/* Brillo decorativo animado */
 .team-card::before {
   content: "";
   position: absolute;
@@ -26,51 +26,54 @@
   height: 200%;
   background: conic-gradient(
     from 180deg at 50% 50%,
-    rgba(255, 255, 255, 0.15),
+    rgba(255, 215, 0, 0.25),
     transparent 70%
   );
   transform: rotate(0deg);
   transition: transform 1s linear;
   z-index: 0;
+  filter: blur(8px);
 }
 
 .team-card:hover::before {
   transform: rotate(360deg);
 }
 
+/* Hover de la card */
 .team-card:hover {
-  transform: translateY(-8px) scale(1.04);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  transform: translateY(-10px) scale(1.06);
+  box-shadow: 0 25px 60px rgba(255, 215, 0, 0.45);
+  border-color: rgba(255, 215, 0, 0.8);
 }
 
 /* Logo */
 .team-card img {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 50%;
-  margin-bottom: 0.8rem;
-  border: 2px solid rgba(255, 255, 255, 0.35);
+  margin-bottom: 1rem;
+  border: 3px solid rgba(255, 215, 0, 0.35);
   padding: 4px;
   background: rgba(255, 255, 255, 0.1);
-  transition: all 0.35s ease;
+  transition: all 0.4s ease;
   position: relative;
   z-index: 1;
 }
 
 .team-card img:hover {
-  transform: scale(1.12) rotate(5deg);
-  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.25);
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
 }
 
 /* Nombre del equipo */
 .team-card h3 {
-  color: #fff;
-  margin-bottom: 0.8rem;
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: 0.7px;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  color: #ffd700;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
   position: relative;
   z-index: 1;
 }
@@ -80,37 +83,64 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0.9rem;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  border-left: 3px solid #ff4757; /* Color llamativo */
-  margin-bottom: 0.5rem;
+  padding: 0.55rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  border-left: 3px solid #ff4757;
+  margin-bottom: 0.6rem;
   font-weight: 600;
-  color: #f1f1f1;
-  font-size: 0.9rem;
+  color: #fff;
+  font-size: 0.95rem;
   position: relative;
   z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.team-info p:hover {
+  background: rgba(255, 215, 0, 0.1);
+  border-left-color: #ffd700;
+  color: #ffd700;
 }
 
 /* Botón "Ver más" */
 .team-card a {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.65rem 1.3rem;
-  background: linear-gradient(135deg, #ff4757, #ff6b81);
-  color: #ffffff;
+  margin-top: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ffd700, #ff6b35);
+  color: #1c1c1c;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 30px;
   font-weight: 700;
-  font-size: 0.95rem;
-  transition: all 0.35s ease;
+  font-size: 1rem;
+  transition: all 0.4s ease;
   position: relative;
   z-index: 1;
-  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.35);
 }
 
 .team-card a:hover {
-  background: linear-gradient(135deg, #ff6b81, #ff4757);
-  transform: translateY(-3px) scale(1.08);
-  box-shadow: 0 8px 25px rgba(255, 71, 87, 0.55);
+  background: linear-gradient(135deg, #ff6b35, #ffd700);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 12px 35px rgba(255, 215, 0, 0.55);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-card {
+    padding: 1.5rem 1rem;
+  }
+  .team-card img {
+    width: 90px;
+    height: 90px;
+  }
+  .team-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card {
+    margin: 0 10px;
+  }
 }

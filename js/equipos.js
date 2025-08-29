@@ -19,11 +19,11 @@ async function fetchTeams() {
     allTeams = data.teams;
     teamsLoading.style.display = "none";
 
-    // Renderizar primeros 10 equipos
-    renderTeams(allTeams.slice(0, 10));
+    // Renderizar primeros 6 equipos
+    renderTeams(allTeams.slice(0, 6));
 
-    // Crear botón "Ver más equipos" si hay más de 10
-    if (allTeams.length > 10) createShowMoreButton();
+    // Crear botón "Ver más equipos" si hay más de 6
+    if (allTeams.length > 6) createShowMoreButton();
   } catch (error) {
     console.error(error);
     teamsLoading.innerHTML =
